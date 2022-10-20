@@ -9,6 +9,7 @@ body .mainContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 250px;
+    border-radius: 10px;
 }
 
 body .mainContainer .buttonContainer {
@@ -48,8 +49,13 @@ body .mainContainer .dataList ul {
     margin-top: 2px;
     margin-bottom: 2px;
     overflow-y: hidden;
-
 }
+
+body .mainContainer .dataList ul li a {
+    text-decoration: none;
+    color: #425563;
+}
+
 body .mainContainer .dataList .dataListUl ul {
     list-style: none;
     display: grid;
@@ -60,12 +66,15 @@ body .mainContainer .dataList .dataListUl ul {
     padding-bottom: 10px;
     padding-left: 10px;
     overflow-y: hidden;
-}
-body .mainContainer .dataList .dataListUl li {
     background-color: #F5F6F7;
-    /* border: 1px solid #F5F6F7; */
     border-radius: 10px;
     font-size: 15px;
+}
+body .mainContainer .dataList .dataListUl ul:hover {
+    background-color: #fafafa;
+}
+body .mainContainer .dataList .dataListUl .dataHeader:hover {
+    background-color: #F5F6F7;
 }
 body .mainContainer .dataList .dataListUl ul li {
     padding-right: 50;

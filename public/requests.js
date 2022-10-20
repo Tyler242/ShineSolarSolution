@@ -1,5 +1,3 @@
-console.log('Success');
-
 // onclick functions
 const getAllUsers = async () => {
   const data = await controller.sendRequest('/users');
@@ -19,13 +17,16 @@ const addUsers = (elemSelector, data) => {
   const ulElem = document.getElementById(elemSelector);
   data.forEach((row) => {
     const topLi = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = '';
     const newUl = document.createElement('ul');
     for (const key in row) {
       let li = document.createElement('li');
       li.textContent = row[key];
       newUl.appendChild(li);
     }
-    topLi.appendChild(newUl);
+    a.appendChild(newUl);
+    topLi.appendChild(a);
     ulElem.appendChild(topLi);
   });
 };
@@ -34,6 +35,8 @@ const addOrders = (elemSelector, data) => {
   const ulElem = document.getElementById(elemSelector);
   data.forEach((row) => {
     const topLi = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = '';
     const newUl = document.createElement('ul');
 
     const priceLi = document.createElement('li');
@@ -52,7 +55,8 @@ const addOrders = (elemSelector, data) => {
     newUl.appendChild(productLi);
     newUl.appendChild(statusLi);
     newUl.appendChild(userIdLi);
-    topLi.append(newUl);
+    a.appendChild(newUl);
+    topLi.append(a);
     ulElem.append(topLi);
   });
 };
