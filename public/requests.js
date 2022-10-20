@@ -61,9 +61,14 @@ const addOrders = (elemSelector, data) => {
 class RequestController {
   #baseUrl = 'http://localhost:3000';
   #headers = {
+    // I normally wouldn't hard code the jwt. Instead I would prompt the user
+    // of this frontend app for a username/password combination and send
+    // those to a login/validation endpoint on the backend server (this is the
+    // provided server) that would return the jwt if validation was successful.
     Authorization: 'Bearer as33dienWJawEgm!@44SDeuasrl48zdsl!_',
   };
 
+  // send a request and return the data
   async sendRequest(path, queryParams = '') {
     const url = this.#baseUrl + path + queryParams;
     const response = await fetch(url, {
