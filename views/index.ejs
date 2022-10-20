@@ -1,0 +1,66 @@
+<head>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/requests.js" defer></script>
+</head>
+<body>
+  <p class="containerText">
+    1. Clicking this button will return all the users from the server.
+  </p>
+  <div class="mainContainer">
+    <div class="buttonContainer">
+      <button onclick="getAllUsers()">Click</button>
+    </div>
+    <div class="dataList">
+      <ul class="dataListUl" id="allUsers">
+        <li>
+          <ul>
+            <li>Id</li>
+            <li>First Name</li>
+            <li>Last Name</li>
+            <li>Email</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p class="containerText">
+    2. Clicking this button will return all the orders from the server.
+  </p>
+  <div class="mainContainer">
+    <div class="buttonContainer">
+      <button onclick="getAllOrders()">Click</button>
+    </div>
+    <div class="dataList">
+      <ul class="dataListUl" id="allOrders">
+        <li>
+          <ul>
+            <li>Price</li>
+            <li>Product</li>
+            <li>Status</li>
+            <li>User Id</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p class="containerText">
+    3. Clicking this button will return ONLY the orders from Jane Doe.
+  </p>
+  <div class="mainContainer">
+    <div class="buttonContainer">
+      <button onclick="getFilteredOrders()">Click</button>
+    </div>
+    <div class="dataList">
+      <ul class="dataListUl" id="filteredOrders">
+        <li>
+          <ul>
+            <li>Price</li>
+            <li>Product</li>
+            <li>Status</li>
+            <li>User Id</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
